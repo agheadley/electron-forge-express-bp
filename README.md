@@ -55,6 +55,11 @@ Build:
     //mainWindow.loadURL(`http://localhost:1234/`)
     ```
 
+## create executables
+
+npm run package (creates out/ and contains executable)
+
+(npm run make - to explore!)
 
 ## file structure
 
