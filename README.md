@@ -75,6 +75,7 @@ npm run package (creates out/ and contains executable)
 
 ## file structure
 
+```
 ├── README.md
 ├── dist
 ├── node_modules
@@ -96,7 +97,7 @@ npm run package (creates out/ and contains executable)
    └── views
       ├── Home.vue
       └── Route1.vue
-
+```
 
 ## file upload
 
