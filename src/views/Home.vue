@@ -26,11 +26,27 @@ methods: {
     this.$router.push('/route1')
     },
     testPost() {
+        fetch(request.url+'test', {  
+            method: 'POST',  
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({req:'test'})
+        }).then(res => res.json())
+        .then (data=>{              
+            this.message=data;
+            console.log(data);
+        }).catch(err=>{
+            this.message=err;
+            console.log(err);
+        })
+    },
+    /*
+    testPost() {
         request.post({data:"test response received!"},"/test",data=>{
             console.log(data);
             this.message=data;
         });
     }
+    */
 }
 }
 </script>

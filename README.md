@@ -82,15 +82,14 @@ npm run package (creates out/ and contains executable)
 ├── package.json
 └── src
    ├── App.vue
-   ├── app.js
+   ├── app.js       (node/express)
    ├── components
    |  └── HelloWorld.vue
-   ├── dist.html
    ├── index.css
-   ├── index.html
-   ├── index.js
-   ├── main.html
-   ├── main.js
+   ├── index.html    (test electron main)
+   ├── index.js      (electron main process)
+   ├── main.html     (route into vue app)
+   ├── main.js       (start of vue app)
    ├── router.js
    ├── scripts
    |  └── request.js

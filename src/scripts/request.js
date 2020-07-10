@@ -1,5 +1,9 @@
-let base="http://localhost:3000"
+let url="http://localhost:3000/"
 
+export {url}
+
+
+/*
 let post=(jsonData,path,callback)=>{
     
     fetch(base+path, {                  // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
@@ -40,9 +44,9 @@ let upload=(formData,callback)=>{
         callback({error:error,data:null});
     });
 }
+*/
 
-
-export {post,upload}
+//export {post,upload}
 
 
 

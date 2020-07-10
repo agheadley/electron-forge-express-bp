@@ -28,7 +28,9 @@ app.get('/', (req, res) => res.send('Hello World! xxx'))
 // test post request.
 app.post('/test',jsonParser,(req, res) => {
     console.log('req.body: ',req.body);
-    res.end(JSON.stringify(req.body));
+    let out={response:"success",body:req.body};
+    console.log(out);
+    res.end(JSON.stringify(out));
 });
 
 
