@@ -21,7 +21,28 @@ let post=(jsonData,path,callback)=>{
 
 }
 
-export {post}
+let upload=(formData,callback)=>{
+    console.log(formData)
+    fetch(base+'/fileUpload', {                  // https://serversideup.net/uploading-files-vuejs-axios/
+        method: 'POST',
+        headers: {
+            'Content-Type': 'multipart/form-data'
+        },
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        callback({error:null,response:data});
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        callback({error:error,data:null});
+    });
+}
+
+
+export {post,upload}
 
 
 

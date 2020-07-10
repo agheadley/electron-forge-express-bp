@@ -1,9 +1,16 @@
 const express = require('express')
 const bodyParser = require("body-parser")
 
+
+
+
 const app = express()
 const port = 3000
 
+
+  
+
+// body parser
 const jsonParser = bodyParser.json()
 
 
@@ -23,5 +30,13 @@ app.post('/test',jsonParser,(req, res) => {
     console.log('req.body: ',req.body);
     res.end(JSON.stringify(req.body));
 });
+
+
+
+
+
+
+
+
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
