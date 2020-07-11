@@ -3,6 +3,10 @@
         <p>Home.vue (Route: /)</p>
         <button @click="onClickGo">Go to /route1</button>
     
+        <p>{{messageLocal}}</p>
+        <button @click="updateLocal">Update localStorage</button>
+    
+
         <p>{{ message }}</p>
     
         <button @click="testPost">Test POST</button>
@@ -23,14 +27,21 @@ export default {
 name: 'Home',
 data() {
     return{
-        message:'Hello from home ...'
+        message:'Hello from home ...',
+        messageLocal:'testing local storage ...'
     }
 },
 methods: {
     onClickGo() {
     this.$router.push('/route1')
     },
+    updateLocal() {
+        //localStorage.setItem('test',0);
+        this.messageLocal="localStorage('test') : "+localStorage.getItem('test');
+        localStorage.setItem('test',Number(localStorage.getItem('test'))+1);
+    },
     testPost() {
+        console.log(localStorage.getItem('test'));
         fetch(request.url+'test', {  
             method: 'POST',  
             headers: {'Content-Type': 'application/json'},
