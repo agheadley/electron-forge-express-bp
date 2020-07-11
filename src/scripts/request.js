@@ -1,52 +1,18 @@
 let url="http://localhost:3000/"
 
-export {url}
-
-
-/*
-let post=(jsonData,path,callback)=>{
-    
-    fetch(base+path, {                  // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(jsonData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Success:', data);
-        callback({error:null,response:data});
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-        callback({error:error,data:null});
-    });
-
-}
-
-let upload=(formData,callback)=>{
-    console.log(formData)
-    fetch(base+'/fileUpload', {                  // https://serversideup.net/uploading-files-vuejs-axios/
-        method: 'POST',
-        headers: {
-            'Content-Type': 'multipart/form-data'
-        },
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Success:', data);
-        callback({error:null,response:data});
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-        callback({error:error,data:null});
+//https://stackoverflow.com/questions/32545632/how-can-i-download-a-file-using-window-fetch
+let download=(filename)=> {
+    fetch(url+'download').then(function(t) {
+        return t.blob().then((b)=>{
+            var a = document.createElement("a");
+            a.href = URL.createObjectURL(b);
+            a.setAttribute("download", filename);
+            a.click();
+        }
+        );
     });
 }
-*/
 
-//export {post,upload}
-
+export {url,download}
 
 
