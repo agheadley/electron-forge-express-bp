@@ -15,6 +15,8 @@
 import DownloadFile from './../components/DownloadFile.vue'
 import UploadFile from './../components/UploadFile.vue'
 
+import * as csv from './../scripts/csv'
+
 export default {
 name: 'Route1',
 components: {
@@ -35,6 +37,8 @@ methods: {
     },
     onUploadFile(value) {
         console.log('uploaded file data: '+value)
+        let response=csv.readCSV(value,',');
+        
     },
 
 

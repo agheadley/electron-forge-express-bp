@@ -23,10 +23,10 @@ const createWindow = () => {
   // and load the index.html of the app.
 
   // build
-  mainWindow.loadFile(path.join(__dirname, '../dist/main.html'));
+  //mainWindow.loadFile(path.join(__dirname, '../dist/main.html'));
   
   // dev - parcel / vue
-  //mainWindow.loadURL(`http://localhost:1234/`)
+  mainWindow.loadURL(`http://localhost:1234/`)
 
   // Open the DevTools.
   //mainWindow.webContents.openDevTools();
